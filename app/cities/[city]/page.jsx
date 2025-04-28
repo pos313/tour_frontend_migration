@@ -1,4 +1,5 @@
 import React from 'react';
+import CityDetailClient from './CityDetailClient';
 
 async function getCityByCity(citySlug) {
   // In a real app, this would fetch from your API
@@ -38,6 +39,5 @@ async function getCityByCity(citySlug) {
 export default async function CityDetailPage({ params }) {
   const city = await getCityByCity(params.city);
   
-  // Need to implement CityDetailClient here
-  return <div>City detail page for {city.name} (needs implementation)</div>;
+  return <CityDetailClient city={city} />;
 }
